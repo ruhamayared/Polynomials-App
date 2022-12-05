@@ -11,7 +11,7 @@ const app = express()
 //Establish Mongo connection
 mongoose.connect(process.env.DATABASE_URL)
 
-//Mongoose conncetion events
+//Mongoose connection events
 mongoose.connection
     .on("open", () => console.log("Connected to Mongo!"))
     .on("close", () => console.log("Disconnected from Mongo!"))
