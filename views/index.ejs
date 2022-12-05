@@ -1,13 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
     <% - include("./partials/head.ejs") %>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Polynomials App</title>
-</head>
-<body>
     
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       
+        <title>Polynomials App</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Polynomials App</h1>
+
+        <div class="polys">
+            <% for (polynomial of polynomials) { %>
+                <div class="cards">
+                    <article>
+                        <a href="/polynomials/<%= polynomial._id %>">
+                            <h2>
+                               
+                                $$<%= polynomial.function %>$$
+                            </h2>
+                        </a>
+                    </article>
+                </div>
+
+                <% } %>
+        </div>
+    </div>
+
 </body>
-</html>No
+
+</html>
