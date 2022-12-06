@@ -7,10 +7,33 @@
 
 ### Link to my Trello Board: [Trello board](https://trello.com/invite/b/0uN35gHS/ATTIdbe1abce3718e717d8ac9b4bd859a6af13AC9509/unit-2-project)
 
-### Wireframe
-![Index Page](https://i.imgur.com/wCmubpm.png)
+### Technologies Used
 
+- JavaScript
+- Node.js
+- HTML
+- CSS
+- jQuery
+- MathJax
+- Google Fonts
+- EJS
+- Express.js
+- Mongo
+- Bootstrap
+
+### Wireframe
+###### Index Page
+![Index Page](https://i.imgur.com/wCmubpm.png)
+###### Show Page
 ![Show Page](https://i.imgur.com/cD1aTDG.jpg)
+
+
+### Mockups
+###### Index Page
+![Index Page](https://i.imgur.com/scGmIXI.png)
+###### Show Page
+![Show Page](https://i.imgur.com/pOtZZX1.png)
+
 
 ### Daily Plan
 
