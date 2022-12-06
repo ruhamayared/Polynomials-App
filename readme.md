@@ -20,8 +20,8 @@
 | 2 | Work on authetication and adding login/logout buttons |
 | 3 | Do research and work on adding a way for users to add/update/delete comments |
 | 4 | Test and retest, make final changes |
-| 5 | Check/test deployed site |
-| 5 | Submit |
+| 5 | Check/test deployed site and submit |
+
 
 
 ### Link to Project
