@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("./partials/head.ejs") %>
+
+    <body>
+        <main>
+            <div class="container">
+
+                <article>
+                    <h2>
+                        Function: $$<%= polynomial.function %>$$
+                    </h2>
+                    <img src="<%= polynomial.image %>" style="width:200px; border:double black">
+                    <h4>
+                        Type: <%= polynomial.type %></br>
+                            Form: <%= polynomial.form %></br>
+                                Degree: <%= polynomial.degree %></br>
+                                    Parent function: $$<%= polynomial.parentFunction %>$$ 
+                    </h4>
+
+                    <img src="<%= polynomial.imageTwo %>" style="width:200px; border:double black">
+
+
+                    <a href="/polynomials/"><button>Back to Home Page</button></a>
+                </article>
+
+            </div>
+        </main>
+    </body>
+
+</html>
