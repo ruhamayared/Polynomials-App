@@ -1,4 +1,4 @@
-## My Unit 2 Project Readme
+# Polynomials App
 
 ### Description of project:
 ##### This app will allow a user to view a list of common polynomial functions, view an individual function and information on that function. Then the user will be able to create a new comment, update their existing comment, and delete a comment -- all on the show page.
@@ -22,16 +22,16 @@
 - Bootstrap
 
 ### Wireframe
-###### Index Page
+##### Index Page
 ![Index Page](https://i.imgur.com/wCmubpm.png)
-###### Show Page
+##### Show Page
 ![Show Page](https://i.imgur.com/cD1aTDG.jpg)
 
 
 ### Mockups
-###### Index Page
+##### Index Page
 ![Index Page](https://i.imgur.com/scGmIXI.png)
-###### Show Page
+##### Show Page
 ![Show Page](https://i.imgur.com/pOtZZX1.png)
 
 
