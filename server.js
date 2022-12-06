@@ -42,14 +42,10 @@ app.use(express.urlencoded({ extended: true }))
 app.use(methodOverride("_method"))
 
 //Routes and Routers
-app.get("/", (req, res) => {
-    res.send("<h1>Server is Working!</h1>")
-})
-
 //Seed Route
 app.get("/polynomials/seed", (req, res) => {
     const startPolynomials = [
-        { function: "f(x)=-5", form: "Standard Form", type: "Constant", parentFunction: "None", degree: "0", image: "https://i.imgur.com/yFzB8FE.png" },
+        { function: "f(x)=-5", form: "Standard Form", type: "Constant", parentFunction: "f(x)=0", degree: "0", image: "https://i.imgur.com/yFzB8FE.png", imageTwo: "https://i.imgur.com/6dxmsMQ.png"},
         { function: "f(x)=-x+2", form: "Slope-Intercept Form", type: "Linear", parentFunction: "f(x)=x", degree: "1", image: "https://i.imgur.com/DKn60DZ.png", imageTwo: "https://i.imgur.com/QhlSBMl.png" },
         { function: "f(x)=3x^2+19x+20", form: "Standard Form", type: "Quadratic", parentFunction: "f(x)=x^2", degree: "2", image: "https://i.imgur.com/FcpKiU6.png", imageTwo: "https://i.imgur.com/nBCZRIr.png" },
         { function: "f(x)=2x^3-5x^2+-2x", form: "Standard Form", type: "Cubic", parentFunction: "f(x)=x^3", degree: "3", image: "https://i.imgur.com/drU8a3P.png", imageTwo: "https://i.imgur.com/qbZmSBu.png" },
@@ -70,8 +66,9 @@ app.get("/polynomials/seed", (req, res) => {
 
 })
 
-//Index Route
-app.get("/polynomials", async (req, res) => {
+
+//Index Route - Home Page
+app.get("/", async (req, res) => {
     const polynomials = await Polynomial.find({})
     res.render("index.ejs", { polynomials })
 })
