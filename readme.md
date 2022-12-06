@@ -9,6 +9,8 @@
 [Trello board](https://trello.com/invite/b/0uN35gHS/ATTIdbe1abce3718e717d8ac9b4bd859a6af13AC9509/unit-2-project)
 
 ### Wireframe
+![Index Page](https://i.imgur.com/wCmubpm.png)
+![Show Page](https://i.imgur.com/cD1aTDG.jpg)
 
 ### Daily Plan
 
