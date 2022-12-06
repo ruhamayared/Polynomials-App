@@ -12,8 +12,8 @@
                         <article>
                             <a href="/polynomials/<%= polynomial._id %>">
                                 <h2>
-                                    $$<%= polynomial.function %>$$
-                                    $$<%= polynomial.type %>$$
+                                    \(<%= polynomial.function %>\) <br>
+                                        <%= polynomial.type %>
                                 </h2>
                             </a>
                             <img src="<%= polynomial.image %> " style="width:200px; border:double blue">
