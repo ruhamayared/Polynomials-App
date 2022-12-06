@@ -1,7 +1,7 @@
 ## My Unit 2 Project Readme
 
 ### Description of project:
-##### This app will allow a user to view a list of common polynomial functions, view an individual function and information on that function, create a new function, update an existing function, and delete a function.
+##### This app will allow a user to view a list of common polynomial functions, view an individual function and information on that function. Then the user will be able to create a new comment, update their existing comment, and delete a comment -- all on the show page.
 
 #### By Ruhama Yared
 
@@ -10,6 +10,7 @@
 
 ### Wireframe
 ![Index Page](https://i.imgur.com/wCmubpm.png)
+## ------------------------------------------------------------------------------------------------------
 ![Show Page](https://i.imgur.com/cD1aTDG.jpg)
 
 ### Daily Plan
