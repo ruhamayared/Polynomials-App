@@ -28,6 +28,7 @@ const polynomialsSchema = new Schema({
     parentFunction: String,
     degree: Number,
     image: String,
+    imageTwo: String
 
 })
 
