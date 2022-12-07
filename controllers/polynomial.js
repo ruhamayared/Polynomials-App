@@ -7,13 +7,13 @@ const router = express.Router()
 
 //Middleware
 //Authorization Middleware
-// router.use((req, res, next) => {
-//     if (req.session.loggedIn) {
-//         next()
-//     } else {
-//         res.redirect("/user/login")
-//     }
-// })
+router.use((req, res, next) => {
+    if (req.session.loggedIn) {
+        next()
+    } else {
+        res.redirect("/user/login")
+    }
+})
 
 
 //Routes
