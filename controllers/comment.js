@@ -15,18 +15,26 @@ router.use((req, res, next) => {
     }
 })
 
-
-//Routes
-//Index Route - Home Page
-router.get("/", async (req, res) => {
-    const polynomials = await Polynomial.find({}).sort({degree: "ascending"})
-    res.render("polynomials/index.ejs", { polynomials })
-})
-
-//Show route
-router.get("/:id", async (req, res) => {
-    const polynomial = await Polynomial.findById(req.params.id)
+//New Route -- do I even need this?
+router.get('/:id', (req, res) => {
     res.render("polynomials/show.ejs", { polynomial })
 })
 
-module.exports = router
+//Delete Route
+
+
+
+//Update Route
+router.put("/:id", async (req, res) => {
+    console.log(req.body)
+    await Comment.findByIdAndUpdate(req.params.id, req.body)
+    res.redirect("/:id")
+  })
+
+
+
+//Create Route
+app.post("/animals", async (req, res) => {
+    let newComment = await Comment.create(req.body)
+    res.redirect("/polynomials")
+  })

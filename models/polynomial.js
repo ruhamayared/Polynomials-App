@@ -1,4 +1,6 @@
 //Polynomials Model
+const Comment = require("./comment")
+
 const mongoose = require('./connection')
 
 // Pull schema and model from mongoose
@@ -12,7 +14,8 @@ const polynomialsSchema = new Schema({
     parentFunction: String,
     degree: Number,
     image: String,
-    imageTwo: String
+    imageTwo: String,
+    comments: [{ ref: Comment, type: mongoose.Schema.Types.ObjectId }]
 
 })
 

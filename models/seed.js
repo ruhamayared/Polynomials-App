@@ -9,7 +9,6 @@ const startPolynomials = [
     { function: "f(x)=2x^3-5x^2+-2x", form: "Standard Form", type: "Cubic", parentFunction: "f(x)=x^3", degree: "3", image: "https://i.imgur.com/drU8a3P.png", imageTwo: "https://i.imgur.com/qbZmSBu.png" },
     { function: "f(x)=3x^4-3x^3-5x^2-6", form: "Standard Form", type: "Quartic", parentFunction: "f(x)=x^4", degree: "4", image: "https://i.imgur.com/i2AHqIg.png", imageTwo: "https://i.imgur.com/PsKwd9Z.png" },
     { function: "f(x)=x^5-5x^3+4x", form: "Standard Form", type: "Quintic", parentFunction: "f(x)=x^5", degree: "5", image: "https://i.imgur.com/iRc4Km1.png", imageTwo: "https://i.imgur.com/nN86vQQ.png" },
-
 ]
 
 //Delete all polynomials
@@ -23,4 +22,3 @@ Polynomial.remove({}, (err, data) => {
     })
 
 })
-
