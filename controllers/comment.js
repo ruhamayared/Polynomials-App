@@ -35,6 +35,9 @@ router.put("/:id", async (req, res) => {
 
 //Create Route
 app.post("/animals", async (req, res) => {
-    let newComment = await Comment.create(req.body)
+    const newComment = await Comment.create(req.body)
     res.redirect("/polynomials")
   })
+
+
+  //Edit Route

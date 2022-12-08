@@ -15,7 +15,7 @@ const polynomialsSchema = new Schema({
     degree: Number,
     image: String,
     imageTwo: String,
-    comments: [{ ref: Comment, type: mongoose.Schema.Types.ObjectId }]
+    comments: [{ type: mongoose.Types.ObjectId, ref: "Comment" }]
 
 })
 
