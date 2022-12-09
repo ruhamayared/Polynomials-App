@@ -20,8 +20,8 @@
                     </h4>
                     <a href="/polynomials/"><button>Back to Home Page</button></a>
                     
-                    <form action="/comments/<%= polynomial._id %>" method="post">
-                        <input type="text" name="text" placeholder="Add a comment.">
+                    <form action="/polynomials/comments/<%= polynomial._id %>" method="post">
+                        <input type="text" name="text" placeholder="Add a comment...">
                         <input type="submit" value="Comment">
                     </form>
 

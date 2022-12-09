@@ -2,6 +2,7 @@
 const express = require('express')
 const { default: mongoose } = require('mongoose')
 const Polynomial = require('../models/polynomial')
+const Comment = require('../models/polynomial')
 const toId = mongoose.Types.ObjectId
 
 // Create Router variable to attach to routes
@@ -25,15 +26,11 @@ router.get("/", async (req, res) => {
     res.render("polynomials/index.ejs", { polynomials })
 })
 
-// //New Route -- do I even need this?
-// router.get('/:id', (req, res) => {
-//     res.render("polynomials/show.ejs", { polynomial })
-// })
 
-// //Delete Route
+//Delete Route
 
 
-// //Update Route
+//Update Route
 // router.put("/:id", async (req, res) => {
 //     await Comment.findByIdAndUpdate(req.params.id, req.body)
 //     res.redirect("/:id")
@@ -42,15 +39,17 @@ router.get("/", async (req, res) => {
 
 
 //Create Route
-router.post("/comments/:id", async (req, res) => {
-    const newComment = await Comment.create(req.body)
-    newComment.save()
-    console.log(newComment)
-    res.redirect("/polynomials/:id")
-})
+// router.post("/comments/:id", async (req, res) => {
+//     req.params.Comment = toId[req.params.Comment]
+//     const newComment = await (await Comment.create(req.params.Comment))
+//     newComment.p
+//     newComment.save()
+//     console.log(newComment)
+//     res.redirect("/polynomials/:id")
+// })
 
 
-// //Edit Route
+//Edit Route
 
 
 //Show route
