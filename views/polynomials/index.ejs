@@ -12,17 +12,14 @@
             <div class="polys">
                 <% for (polynomial of polynomials) { %>
                     <div class="cards">
-                        <article>
-                            <a href="/polynomials/<%= polynomial._id %>">
-                                <h2>
-                                    \(<%= polynomial.function %>\) <br>
-                                        <%= polynomial.type %>
-                                </h2>
-                            </a>
+                        <a href="/polynomials/<%= polynomial._id %>">
+                            <h3>
+                                \(<%= polynomial.function %>\) <br>
+                                    <%= polynomial.type %>
+                            </h3>
+                        </a>
                             <img src="<%= polynomial.image %> " style="width:200px; border:double blue">
-                        </article>
                     </div>
-
                     <% } %>
             </div>
         </div>

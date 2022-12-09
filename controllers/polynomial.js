@@ -5,7 +5,7 @@ const Polynomial = require('../models/polynomial')
 const Comment = require('../models/polynomial')
 const toId = mongoose.Types.ObjectId
 
-// Create Router variable to attach to routes
+// Create router variable to attach to routes
 const router = express.Router()
 
 //Middleware
