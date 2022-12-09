@@ -1,6 +1,8 @@
 //Import Dependencies
 const express = require('express')
+const { default: mongoose } = require('mongoose')
 const Polynomial = require('../models/polynomial')
+const toId = mongoose.Types.ObjectId
 
 // Create Router variable to attach to routes
 const router = express.Router()
@@ -19,9 +21,37 @@ router.use((req, res, next) => {
 //Routes
 //Index Route - Home Page
 router.get("/", async (req, res) => {
-    const polynomials = await Polynomial.find({}).sort({degree: "ascending"})
+    const polynomials = await Polynomial.find({}).sort({ degree: "ascending" })
     res.render("polynomials/index.ejs", { polynomials })
 })
+
+// //New Route -- do I even need this?
+// router.get('/:id', (req, res) => {
+//     res.render("polynomials/show.ejs", { polynomial })
+// })
+
+// //Delete Route
+
+
+// //Update Route
+// router.put("/:id", async (req, res) => {
+//     await Comment.findByIdAndUpdate(req.params.id, req.body)
+//     res.redirect("/:id")
+// })
+
+
+
+//Create Route
+router.post("/comments/:id", async (req, res) => {
+    const newComment = await Comment.create(req.body)
+    newComment.save()
+    console.log(newComment)
+    res.redirect("/polynomials/:id")
+})
+
+
+// //Edit Route
+
 
 //Show route
 router.get("/:id", async (req, res) => {
