@@ -1,5 +1,6 @@
 body {
     background-color: rgb(212, 235, 242);
+    background-image: url("https://img.freepik.com/free-photo/white-crumpled-paper-texture-background-design-space-white-tone_1258-78696.jpg?w=2000");
 }
 
 .polys {
@@ -20,7 +21,7 @@ body {
     margin: 5px;
     border: 4px ridge rgb(166, 194, 212);
     border-radius: 5%;
-    
+
 }
 
 h1 {
@@ -33,4 +34,9 @@ h2 {
     padding-bottom: 5px;
     margin-bottom: 10px;
     border-bottom: 2px solid grey;
+}
+
+showimg {
+    float: left;
+    margin: 5px;
 }
