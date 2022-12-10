@@ -1,6 +1,7 @@
 require('dotenv').config()
 const mongoose = require('./connection')
 const Polynomial = require('./polynomial')
+const Comment = require("./comment")
 
 const startPolynomials = [
     { function: "f(x)=-5", form: "Standard Form", type: "Constant", parentFunction: "f(x)=0", degree: "0", image: "https://i.imgur.com/yFzB8FE.png", imageTwo: "https://i.imgur.com/6dxmsMQ.png" },
@@ -15,9 +16,10 @@ const startPolynomials = [
 Polynomial.remove({}, (err, data) => {
     //Create new polynomials once old polynomials are deleted
     Polynomial.create(startPolynomials, (err, data) => {
-
-        console.log(data)
-        mongoose.connection.close()
+        Comment.remove({}, (err, deletedComments) => {
+            console.log(data)
+            mongoose.connection.close()
+        })
 
     })
 

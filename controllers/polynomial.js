@@ -2,7 +2,7 @@
 const express = require('express')
 const { default: mongoose } = require('mongoose')
 const Polynomial = require('../models/polynomial')
-const Comment = require('../models/polynomial')
+const Comment = require('../models/comment')
 const toId = mongoose.Types.ObjectId
 
 // Create router variable to attach to routes
@@ -38,15 +38,31 @@ router.get("/", async (req, res) => {
 
 
 
-//Create Route
-// router.post("/comments/:id", async (req, res) => {
-//     req.params.Comment = toId[req.params.Comment]
-//     const newComment = await (await Comment.create(req.params.Comment))
-//     newComment.p
-//     newComment.save()
-//     console.log(newComment)
-//     res.redirect("/polynomials/:id")
-// })
+// Create Route
+router.post("/comments/:id", (req, res) => {
+    console.log(req.params.id, req.body)
+    Polynomial.findById(req.params.id, (err, poly) => {
+        console.log("polynomial: ", poly)
+        Comment.create(req.body, (err, comment) => {
+            console.log("comment:", comment)
+            poly.comments.push(`${comment._id}`)
+            poly.save()
+            res.redirect(`/polynomials/${req.params.id}`)
+        })
+    })
+    
+
+
+
+
+
+    // req.params.Comment = toId[req.params.Comment]
+    // const newComment = await (await Comment.create(req.params.Comment))
+    // newComment.p
+    // newComment.save()
+    // console.log(newComment)
+    // res.redirect("/polynomials/:id")
+})
 
 
 //Edit Route
@@ -54,7 +70,8 @@ router.get("/", async (req, res) => {
 
 //Show route
 router.get("/:id", async (req, res) => {
-    const polynomial = await Polynomial.findById(req.params.id)
+    const polynomial = await Polynomial.findById(req.params.id).populate("comments")
+    console.log(polynomial)
     res.render("polynomials/show.ejs", { polynomial })
 })
 

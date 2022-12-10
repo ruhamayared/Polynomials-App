@@ -36,7 +36,8 @@ h2 {
     border-bottom: 2px solid grey;
 }
 
-showimg {
+.showimg {
     float: left;
     margin: 5px;
 }
+

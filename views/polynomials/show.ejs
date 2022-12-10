@@ -12,13 +12,18 @@
                     </h2>
                     <a href="/polynomials/"><button>Back to Home Page</button></a>
                     <div class="showpg">
-                    <img class="showimg" src="<%= polynomial.image %>" style="width:200px; border: 3px double black">
+                    <img class="showimg" src="<%= polynomial.image %>" style="width:250px; border: 3px double black">
                     <h4>
                         Type: <%= polynomial.type %></br>
                             Form: <%= polynomial.form %></br>
                                 Degree: <%= polynomial.degree %></br>
                                     Parent function: \(<%= polynomial.parentFunction %>\)</br>
                                         <img src="<%= polynomial.imageTwo %>" style="width:100px; border: 3px double black">
+                                        <% for (let comment of polynomial.comments) { %>
+                                            <h4><%=comment.text%></h4>
+
+
+                                        <%}%>
                     </h4>
                     
                     
