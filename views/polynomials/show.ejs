@@ -20,7 +20,13 @@
                                     Parent function: \(<%= polynomial.parentFunction %>\)</br>
                                         <img src="<%= polynomial.imageTwo %>" style="width:100px; border: 3px double black">
                                         <% for (let comment of polynomial.comments) { %>
-                                            <h4><%=comment.text%></h4>
+                                            <p class="comments"><%=comment.text%></p>
+                                            <div class="buttons">
+                                                <a href="/polynomials/comments/<%= polynomial._id %>/edit"><button>Edit</button></a>
+                                                <form action="/polynomials/comments/<%= polynomial._id %>?_method=DELETE" method="POST">
+                                                    <input type="submit" value="Delete" />
+                                                </form>
+                                            </div>
 
 
                                         <%}%>

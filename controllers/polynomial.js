@@ -3,7 +3,6 @@ const express = require('express')
 const { default: mongoose } = require('mongoose')
 const Polynomial = require('../models/polynomial')
 const Comment = require('../models/comment')
-const toId = mongoose.Types.ObjectId
 
 // Create router variable to attach to routes
 const router = express.Router()
@@ -28,51 +27,50 @@ router.get("/", async (req, res) => {
 
 
 //Delete Route
+router.delete("/comments/:id", async (req, res) => {
+    await Comment.findByIdAndDelete(req.params.id)
+    res.redirect(`/polynomials/${req.params.id}`)
+})
 
 
 //Update Route
-// router.put("/:id", async (req, res) => {
-//     await Comment.findByIdAndUpdate(req.params.id, req.body)
-//     res.redirect("/:id")
-// })
+router.put("/comments/:id", async (req, res) => {
+    await Comment.findByIdAndUpdate(req.params.id, req.body)
+    res.redirect(`/polynomials/${req.params.id}`)
+})
 
 
 
 // Create Route
 router.post("/comments/:id", (req, res) => {
-    console.log(req.params.id, req.body)
+    //Find polynomial by id
     Polynomial.findById(req.params.id, (err, poly) => {
-        console.log("polynomial: ", poly)
+        //Create the comment
         Comment.create(req.body, (err, comment) => {
-            console.log("comment:", comment)
+            //Push comment into comment array and schema
             poly.comments.push(`${comment._id}`)
+            //Save comment
             poly.save()
             res.redirect(`/polynomials/${req.params.id}`)
         })
     })
-    
 
-
-
-
-
-    // req.params.Comment = toId[req.params.Comment]
-    // const newComment = await (await Comment.create(req.params.Comment))
-    // newComment.p
-    // newComment.save()
-    // console.log(newComment)
-    // res.redirect("/polynomials/:id")
+    //Will I need to add a way for user to add comment?
 })
 
-
 //Edit Route
-
+router.get("/comments/:id/edit", async (req, res) => {
+    const comment = await Comment.findById(req.params.id)
+    console.log(comment)
+    res.render("polynomials/edit.ejs", { comment })
+})
 
 //Show route
 router.get("/:id", async (req, res) => {
     const polynomial = await Polynomial.findById(req.params.id).populate("comments")
-    console.log(polynomial)
     res.render("polynomials/show.ejs", { polynomial })
 })
 
 module.exports = router
+
+

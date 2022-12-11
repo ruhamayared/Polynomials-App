@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("../partials/head.ejs") %>
+
+    <body>
+        <main>
+            <div class="container">
+
+                <h1>Edit your comment
+                </h1>
+
+                <form action="/polynomials/comments/<%= comment._id %>?_method=PUT" method="post">
+                   <input type="text" name="text" value="<%=comment.text%>">
+
+                    <input type="submit" value="Update comment.">
+                </form>
+
+            </div>
+        </main>
+    </body>
+
+</html>
+
