@@ -71,6 +71,7 @@ h2 {
     background-color: white; 
     color: black; 
     border: 2px solid rgb(118, 175, 210);
+    border-radius: 15%;
 }
 
 .userBody{
@@ -78,3 +79,60 @@ h2 {
     display: flex;
     align-items: center;
 }
+
+
+.textarea {
+    width: 50%;
+    height: 60px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    resize: none;
+  }
+
+  .commentBox{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .comments {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    width: 50%;
+    margin: 5px;
+    border-bottom: 2px solid rgb(137, 148, 154);
+  }
+
+  .mainShow {
+    
+  }
+
+  .commentSubmit {
+    background-color: white; 
+    color: black; 
+    border: 2px solid rgb(118, 175, 210);
+    border-radius: 15%;
+    margin-left: 10px;
+  }
+
+  .commentEdit {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-right: 100px;
+  }
+
+  .delete {
+    background-color: white; 
+    color: black; 
+    border: 2px solid rgb(118, 175, 210);
+    border-radius: 15%;
+    margin-left: 10px;
+  }
