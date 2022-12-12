@@ -9,7 +9,7 @@
                 <h2>Edit your comment
                 </h2>
 
-                <form action="/polynomials/<%= comment._id %>?_method=PUT&polynomialId=<%= polynomial._id %> " method="post">
+                <form action="/polynomials/<%= comment._id %>?_method=PUT&polynomialId=<%= polynomial._id %>" method="post">
                    <input class="textarea" type="text" name="text" value="<%=comment.text%>">
 
                     <input class="signLog" type="submit" value="Update comment">

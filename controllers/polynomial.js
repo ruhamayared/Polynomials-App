@@ -26,9 +26,9 @@ router.get("/", async (req, res) => {
 })
 
 //Delete Route -- working but not taking me back to the updated show page
-router.delete("/comments/:id", async (req, res) => {
+router.delete("/:id", async (req, res) => {
     await Comment.findByIdAndDelete(req.params.id)
-    res.redirect(`/polynomials/${req.params.id}`)
+    res.redirect(`/polynomials/${req.query.polynomialId}`)
 })
 
 //Update Route -- working but not taking me back to the updated show page
