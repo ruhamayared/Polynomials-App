@@ -32,10 +32,12 @@ router.delete("/comments/:id", async (req, res) => {
 })
 
 //Update Route -- working but not taking me back to the updated show page
-router.put("/comments/:id", async (req, res) => {
+router.put("/:id", async (req, res) => {
     //Update the comment
     await Comment.findByIdAndUpdate(req.params.id, req.body)
-    res.redirect(`/polynomials/${req.params.id}`)
+    console.log("put", req.query.polynomialId)
+    res.redirect(`/polynomials/${req.query.polynomialId}`)
+    
 })
 
 // Create Route
@@ -58,9 +60,9 @@ router.post("/comments/:id", (req, res) => {
 //Edit Route
 router.get("/comments/:id/edit", async (req, res) => {
     const comment = await Comment.findById(req.params.id)
-    console.log(comment)
-    console.log(req.params.id)
-    res.render("polynomials/edit.ejs", { comment })
+    const polynomial = await Polynomial.find({comments: {$in: [comment._id]}}).populate("comments")
+    console.log(polynomial)
+    res.render("polynomials/edit.ejs", { comment, polynomial: polynomial[0] })
 
 })
 

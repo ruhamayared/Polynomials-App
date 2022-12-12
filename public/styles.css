@@ -36,7 +36,7 @@ h2 {
 
 .showimg {
     float: left;
-    margin: 5px;
+    margin: 5px 10px 0px 0;
 }
 
 .mainIndex, .indexH1{
@@ -109,10 +109,6 @@ h2 {
     border-bottom: 2px solid rgb(137, 148, 154);
   }
 
-  .mainShow {
-    
-  }
-
   .commentSubmit {
     background-color: white; 
     color: black; 
@@ -135,4 +131,12 @@ h2 {
     border: 2px solid rgb(118, 175, 210);
     border-radius: 15%;
     margin-left: 10px;
+  }
+
+  h4 {
+    margin-top: 5px;
+  }
+
+  .mainShow {
+    text-align: center;
   }
