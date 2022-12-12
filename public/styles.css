@@ -1,5 +1,4 @@
 body {
-    background-color: rgb(212, 235, 242);
     background-image: url("https://img.freepik.com/free-photo/white-crumpled-paper-texture-background-design-space-white-tone_1258-78696.jpg?w=2000");
 }
 
@@ -21,7 +20,6 @@ body {
     margin: 5px;
     border: 4px ridge rgb(166, 194, 212);
     border-radius: 5%;
-
 }
 
 h1 {
@@ -41,3 +39,42 @@ h2 {
     margin: 5px;
 }
 
+.mainIndex, .indexH1{
+    text-align: center;
+}
+
+#carousel {
+    width: 35%;
+}
+
+.indexH3 {
+    margin: 40px 0 40px 0;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content:space-around;
+    height: 300px;
+    width: 300px;
+    border: 4px ridge rgb(166, 194, 212);
+    border-radius: 5%;
+    margin: auto;
+}
+
+.userLogin {
+    padding-bottom: 10px;
+}
+
+.signLog {
+    background-color: white; 
+    color: black; 
+    border: 2px solid rgb(118, 175, 210);
+}
+
+.userBody{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}

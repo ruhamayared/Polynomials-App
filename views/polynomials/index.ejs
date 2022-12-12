@@ -4,21 +4,22 @@
 
     <body>
         <div class="container">
-            <h1>Polynomials App</h1>
+            <div class="indexH1">
+                <h1>Polynomials App</h1>
 
-            <a href="/user/logout"><button>Logout</button></a>
-
+                <a href="/user/logout"><button class="signLog">Logout</button></a>
+            </div>
 
             <div class="polys">
                 <% for (polynomial of polynomials) { %>
                     <div class="cards">
                         <a href="/polynomials/<%= polynomial._id %>">
                             <h3>
-                                \(<%= polynomial.function %>\) <br>
+                                \(<%= polynomial.function %>\)<br>
                                     <%= polynomial.type %>
                             </h3>
                         </a>
-                            <img src="<%= polynomial.image %> " style="width:200px; border: 3px double black">
+                        <img src="<%= polynomial.image %> " style="width:200px; border: 3px double black">
                     </div>
                     <% } %>
             </div>

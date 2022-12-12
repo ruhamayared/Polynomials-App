@@ -25,21 +25,18 @@ router.get("/", async (req, res) => {
     res.render("polynomials/index.ejs", { polynomials })
 })
 
-
-//Delete Route
+//Delete Route -- working but not taking me back to the updated show page
 router.delete("/comments/:id", async (req, res) => {
     await Comment.findByIdAndDelete(req.params.id)
     res.redirect(`/polynomials/${req.params.id}`)
 })
 
-
-//Update Route
+//Update Route -- working but not taking me back to the updated show page
 router.put("/comments/:id", async (req, res) => {
+    //Update the comment
     await Comment.findByIdAndUpdate(req.params.id, req.body)
     res.redirect(`/polynomials/${req.params.id}`)
 })
-
-
 
 // Create Route
 router.post("/comments/:id", (req, res) => {
@@ -62,7 +59,9 @@ router.post("/comments/:id", (req, res) => {
 router.get("/comments/:id/edit", async (req, res) => {
     const comment = await Comment.findById(req.params.id)
     console.log(comment)
+    console.log(req.params.id)
     res.render("polynomials/edit.ejs", { comment })
+
 })
 
 //Show route
@@ -72,5 +71,7 @@ router.get("/:id", async (req, res) => {
 })
 
 module.exports = router
+
+
 
 

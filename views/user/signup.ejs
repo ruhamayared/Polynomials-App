@@ -2,17 +2,18 @@
 <html lang="en">
 <%- include("../partials/head.ejs") %>
 
-    <body>
-        <main>
+    <body class="userBody">
+        <main class="user">
             <div>
                 <form action="/user/signup" method="post">
                     <fieldset>
                         <legend>New User</legend>
-                        <label>Username: <input type="text" name="username" required />
+                        <label class="userLogin"><input type="text" name="username" placeholder="Username" required />
                         </label>
-                        <label>Password: <input type="password" name="password" required />
+                        <label class="userLogin"><input type="password" name="password" placeholder="Password"
+                                required />
                         </label>
-                        <input type="submit" value="Create Account" />
+                        <input class="signLog" type="submit" value="Create Account" />
                     </fieldset>
                 </form>
             </div>
