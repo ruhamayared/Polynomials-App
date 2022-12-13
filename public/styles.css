@@ -16,29 +16,52 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  height: 340px;
-  width: 450px;
+  height: 350px;
+  width: 400px;
   margin: 20px 5px 0 5px;
-
-
   border: 4px ridge rgb(166, 194, 212);
   border-radius: 5%;
 }
 
 h1 {
   padding-bottom: 5px;
+  margin-top: 15px;
   margin-bottom: 20px;
   border-bottom: 2px solid grey;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 3em;
 }
 
 h2 {
   padding-bottom: 5px;
   margin-bottom: 10px;
+  margin-top: 15px;
   border-bottom: 2px solid grey;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 2.5em;
 }
 
 h3 {
   margin-top: 7px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 2em;
+}
+
+h4 {
+  margin-top: 10px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 2em;
+}
+
+h5 {
+  margin-top: 10px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 1.5em;
+}
+
+legend {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 2em;
 }
 
 .showimg {
@@ -80,6 +103,8 @@ h3 {
   color: black;
   border: 2px solid rgb(118, 175, 210);
   border-radius: 15%;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 1.5em;
 }
 
 .userBody {
@@ -87,7 +112,6 @@ h3 {
   display: flex;
   align-items: center;
 }
-
 
 .textarea {
   width: 50%;
@@ -117,6 +141,8 @@ h3 {
   width: 40%;
   margin: 5px;
   border-bottom: 2px solid rgb(137, 148, 154);
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 1.4em;
 }
 
 .commentSubmit {
@@ -140,12 +166,10 @@ h3 {
   color: black;
   border: 2px solid rgb(118, 175, 210);
   border-radius: 15%;
-  margin-left: 10px;
+  margin-left: 155px;
   margin-right: 400px;
-}
-
-h4 {
-  margin-top: 10px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 1.3em;
 }
 
 .mainShow {
@@ -166,6 +190,8 @@ h4 {
   color: black;
   border: 2px solid rgb(118, 175, 210);
   border-radius: 15%;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 1.3em;
 }
 
 .indexButtons {
@@ -180,17 +206,28 @@ h4 {
   color: black;
   border: 2px solid rgb(118, 175, 210);
   border-radius: 15%;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 1.5em;
 }
 
 .createButton {
-  margin-top: 20px;
+  margin-top: 30px;
+  margin-bottom: 40px;
   background-color: white;
   color: black;
   border: 2px solid rgb(118, 175, 210);
   border-radius: 15%;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 1.5em;
 }
 
 nav {
   display: flex;
   justify-content: center;
+}
+
+input {
+  margin-bottom: 10px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 1.1em;
 }

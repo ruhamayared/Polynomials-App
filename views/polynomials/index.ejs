@@ -14,10 +14,10 @@
                 <% for (polynomial of polynomials) { %>
                     <div class="cards">
                         <a href="/polynomials/<%= polynomial._id %>">
-                            <h3>
+                            <h4>
                                 \(<%= polynomial.function %>\)<br>
                                     <%= polynomial.type %>
-                            </h3>
+                            </h4>
                         </a>
                         <img src="<%= polynomial.image %> " style="width:200px; border: 3px double black">
                         <div class="indexButtons">

@@ -49,7 +49,7 @@ router.put("/:id", async (req, res) => {
 })
 
 //Update Route -- Comments
-router.put("/:id", async (req, res) => {
+router.put("/comments/:id", async (req, res) => {
     //Update the comment
     await Comment.findByIdAndUpdate(req.params.id, req.body)
     res.redirect(`/polynomials/${req.query.polynomialId}`)

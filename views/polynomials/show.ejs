@@ -38,11 +38,11 @@
                 </div>
 
                 <div class="commentButtons">
-                    <a href="/polynomials/comments/<%= comment._id %>/edit"><button class="signLog">Edit</button></a>
+                    <a href="/polynomials/comments/<%= comment._id %>/edit"><button class="delete">Edit</button></a>
                     <form
                         action="/polynomials/comments/<%= comment._id %>?_method=DELETE&polynomialId=<%= polynomial._id %>"
                         method="POST">
-                        <input class="delete" class="signLog" type="submit" value="Delete" />
+                        <input class="delete" type="submit" value="Delete" />
                     </form>
                 </div>
                 <%}%>
