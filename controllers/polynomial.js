@@ -25,7 +25,7 @@ router.get("/", async (req, res) => {
     res.render("polynomials/index.ejs", { polynomials })
 })
 
-//New route -- Polynomials
+//New Route -- Polynomials
 router.get("/new", (req, res) => {
     res.render("polynomials/new.ejs")
 })
@@ -58,7 +58,6 @@ router.put("/comments/:id", async (req, res) => {
 //Create Route -- Polynomials
 router.post("/", async (req, res) => {
     await Polynomial.create(req.body)
-    console.log("body", req.body)
     res.redirect("/polynomials")
 })
 
@@ -90,7 +89,7 @@ router.get("/comments/:id/edit", async (req, res) => {
     res.render("polynomials/edit-comments.ejs", { comment, polynomial: polynomial[0] })
 })
 
-//Show route -- Polynomials
+//Show Route -- Polynomials
 router.get("/:id", async (req, res) => {
     const polynomial = await Polynomial.findById(req.params.id).populate("comments")
     res.render("polynomials/show.ejs", { polynomial })

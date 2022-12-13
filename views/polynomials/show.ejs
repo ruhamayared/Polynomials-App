@@ -14,12 +14,15 @@
             </div>
 
             <div class="showpg">
-                <img class="showimg" src="<%= polynomial.image %>" style="width:250px; border: 3px double black">
+                <img class="showimg" src="<%= polynomial.image %>">
                 <h4>
-                    Type: <%= polynomial.type %></br>
-                        Form: <%= polynomial.form %></br>
-                            Degree: <%= polynomial.degree %></br>
-                                Parent function: \(<%= polynomial.parentFunction %>\)</br>
+                    <span class="showH4">Type:</span>
+                    <%= polynomial.type %></br>
+                        <span class="showH4">Form:</span>
+                        <%= polynomial.form %></br>
+                            <span class="showH4">Degree:</span>
+                            <%= polynomial.degree %></br>
+                                <span class="showH4">Parent function:</span> \(<%= polynomial.parentFunction %>\)</br>
                                     <img src="<%= polynomial.imageTwo %>" style="width:139px; border: 3px double black">
                 </h4>
             </div>
@@ -30,11 +33,12 @@
                 </form>
             </div>
 
+
             <% for (let comment of polynomial.comments) { %>
-                <div class="commentsDiv">
-                    <p class="comments">
-                        <%=comment.text%>
-                    </p>
+                <div class="commentsDiv"></div>
+                <p class="comments">
+                    <%=comment.text%>
+                </p>
                 </div>
 
                 <div class="commentButtons">
@@ -47,7 +51,6 @@
                 </div>
                 <%}%>
                     </article>
-
         </main>
     </body>
 

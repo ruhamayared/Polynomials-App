@@ -3,7 +3,7 @@ const Comment = require("./comment")
 
 const mongoose = require('./connection')
 
-// Pull schema and model from mongoose
+//Pull schema and model from mongoose
 const { Schema, model } = mongoose
 
 //Make polynomials schema
