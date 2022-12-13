@@ -10,7 +10,7 @@
                         Function: \(<%= polynomial.function %>\)
                     </h2>
 
-                    <a href="/polynomials/"><button class="signLog">Back to Home Page</button></a>
+                    <a href="/polynomials/"><button class= "backButton">Back to Home Page</button></a>
             </div>
 
             <div class="showpg">
@@ -22,27 +22,31 @@
                                 Parent function: \(<%= polynomial.parentFunction %>\)</br>
                                     <img src="<%= polynomial.imageTwo %>" style="width:139px; border: 3px double black">
                 </h4>
-
+            </div>
+            <div class="showPgComments">
                 <form class="commentBox" action="/polynomials/comments/<%= polynomial._id %>" method="post">
                     <input class="textarea" type="text" name="text" placeholder="Add a comment...">
                     <input class="commentSubmit" type="submit" value="Comment">
                 </form>
-
             </div>
-            <div>
-                <% for (let comment of polynomial.comments) { %>
+
+            <% for (let comment of polynomial.comments) { %>
+                <div class="commentsDiv">
                     <p class="comments">
                         <%=comment.text%>
                     </p>
-            </div>
-            <div class="commentEdit">
-                <a href="/polynomials/comments/<%= comment._id %>/edit"><button class="signLog">Edit</button></a>
-                <form action="/polynomials/<%= comment._id %>?_method=DELETE&polynomialId=<%= polynomial._id %>" method="POST">
-                    <input class="delete" class="signLog" type="submit" value="Delete" />
-                </form>
-            </div>
-            <%}%>
-                </article>
+                </div>
+
+                <div class="commentButtons">
+                    <a href="/polynomials/comments/<%= comment._id %>/edit"><button class="signLog">Edit</button></a>
+                    <form
+                        action="/polynomials/comments/<%= comment._id %>?_method=DELETE&polynomialId=<%= polynomial._id %>"
+                        method="POST">
+                        <input class="delete" class="signLog" type="submit" value="Delete" />
+                    </form>
+                </div>
+                <%}%>
+                    </article>
 
         </main>
     </body>

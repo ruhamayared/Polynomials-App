@@ -1,142 +1,191 @@
 body {
-    background-image: url("https://img.freepik.com/free-photo/white-crumpled-paper-texture-background-design-space-white-tone_1258-78696.jpg?w=2000");
+  background-image: url("https://img.freepik.com/free-photo/white-crumpled-paper-texture-background-design-space-white-tone_1258-78696.jpg?w=2000");
 }
 
 .polys {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    font-size: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  font-size: 15px;
 }
 
 .cards {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    height: 320px;
-    width: 420px;
-    margin: 5px;
-    border: 4px ridge rgb(166, 194, 212);
-    border-radius: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 340px;
+  width: 420px;
+  margin: 20px 5px 0 5px;
+  
+
+  border: 4px ridge rgb(166, 194, 212);
+  border-radius: 5%;
 }
 
 h1 {
-    padding-bottom: 5px;
-    margin-bottom: 10px;
-    border-bottom: 2px solid grey;
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid grey;
 }
 
 h2 {
-    padding-bottom: 5px;
-    margin-bottom: 10px;
-    border-bottom: 2px solid grey;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+  border-bottom: 2px solid grey;
+}
+
+h3 {
+  margin-top: 7px;
 }
 
 .showimg {
-    float: left;
-    margin: 5px 10px 0px 0;
+  float: left;
+  margin: 5px 20px 0px 0;
 }
 
-.mainIndex, .indexH1{
-    text-align: center;
+.mainIndex,
+.indexH1 {
+  text-align: center;
 }
 
 #carousel {
-    width: 35%;
+  width: 35%;
 }
 
 .indexH3 {
-    margin: 40px 0 40px 0;
+  margin: 40px 0 40px 0;
 }
 
 .user {
-    display: flex;
-    align-items: center;
-    text-align: center;
-    justify-content:space-around;
-    height: 300px;
-    width: 300px;
-    border: 4px ridge rgb(166, 194, 212);
-    border-radius: 5%;
-    margin: auto;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: space-around;
+  height: 300px;
+  width: 300px;
+  border: 4px ridge rgb(166, 194, 212);
+  border-radius: 5%;
+  margin: auto;
 }
 
 .userLogin {
-    padding-bottom: 10px;
+  padding-bottom: 10px;
 }
 
 .signLog {
-    background-color: white; 
-    color: black; 
-    border: 2px solid rgb(118, 175, 210);
-    border-radius: 15%;
+  background-color: white;
+  color: black;
+  border: 2px solid rgb(118, 175, 210);
+  border-radius: 15%;
 }
 
-.userBody{
-    height: 100vh;
-    display: flex;
-    align-items: center;
+.userBody {
+  height: 100vh;
+  display: flex;
+  align-items: center;
 }
 
 
 .textarea {
-    width: 50%;
-    height: 60px;
-    padding: 12px 20px;
-    box-sizing: border-box;
-    border: 2px solid #ccc;
-    border-radius: 4px;
-    background-color: #f8f8f8;
-    resize: none;
-  }
+  width: 50%;
+  height: 60px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  resize: none;
+}
 
-  .commentBox{
-    display: flex;
-    align-items: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
-  }
+.commentBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 70%;
+}
 
-  .comments {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 60px;
-    width: 50%;
-    margin: 5px;
-    border-bottom: 2px solid rgb(137, 148, 154);
-  }
+.comments {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  width: 40%;
+  margin: 5px;
+  border-bottom: 2px solid rgb(137, 148, 154);
+}
 
-  .commentSubmit {
-    background-color: white; 
-    color: black; 
-    border: 2px solid rgb(118, 175, 210);
-    border-radius: 15%;
-    margin-left: 10px;
-  }
+.commentSubmit {
+  background-color: white;
+  color: black;
+  border: 2px solid rgb(118, 175, 210);
+  border-radius: 15%;
+  margin-left: 10px;
+}
 
-  .commentEdit {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    margin-right: 100px;
-  }
+.commentButtons {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: center;
+  margin-right: 100px;
+}
 
-  .delete {
-    background-color: white; 
-    color: black; 
-    border: 2px solid rgb(118, 175, 210);
-    border-radius: 15%;
-    margin-left: 10px;
-  }
+.delete {
+  background-color: white;
+  color: black;
+  border: 2px solid rgb(118, 175, 210);
+  border-radius: 15%;
+  margin-left: 10px;
+  margin-right: 400px;
+}
 
-  h4 {
-    margin-top: 5px;
-  }
+h4 {
+  margin-top: 10px;
+}
 
-  .mainShow {
-    text-align: center;
-  }
+.mainShow {
+  text-align: center;
+}
+
+.showpg,
+.showPgComments,
+.commentsDiv {
+  display: flex;
+  justify-content: center;
+}
+
+.backButton {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  background-color: white;
+  color: black;
+  border: 2px solid rgb(118, 175, 210);
+  border-radius: 15%;
+}
+
+.indexButtons {
+  display: flex;
+  height: 50px;
+  margin-top: 10px;
+}
+
+.indexDelete {
+  margin-left: 10px;
+  background-color: white;
+  color: black;
+  border: 2px solid rgb(118, 175, 210);
+  border-radius: 15%;
+}
+
+.createButton {
+  margin-top: 20px;
+  background-color: white;
+  color: black;
+  border: 2px solid rgb(118, 175, 210);
+  border-radius: 15%;
+}
