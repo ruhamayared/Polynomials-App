@@ -20,7 +20,5 @@ Polynomial.remove({}, (err, data) => {
             console.log(data)
             mongoose.connection.close()
         })
-
     })
-
 })

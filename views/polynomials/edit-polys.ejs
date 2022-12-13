@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("../partials/head.ejs") %>
+
+    <body>
+        <main>
+            <div class="container">
+
+                <h1>Update <%= polynomial.function %>
+                </h1>
+
+                <form action="/polynomials/<%= polynomial._id %>?_method=PUT" method="post">
+                    Function: <input type="text" name="function" value="<%= polynomial.function %>"
+                        placeholder="Function"></br>
+                    Image: <input type="text" name="image" value="<%= polynomial.image %>" placeholder="Image URL"></br>
+                    Type: <input type="text" name="type" value="<%= polynomial.type %>" placeholder="Type"></br>
+                    Form: <input type="text" name="form" value="<%= polynomial.form %>" placeholder="Form"></br>
+                    Degree <input type="number" name="degree" value="<%= polynomial.degree %>"
+                        placeholder="Degree"></br>
+                    Parent Function: <input type="text" name="parentFunction" value="<%= polynomial.parentFunction %>"
+                        placeholder="Parent Function"></br>
+                    Parent Function Image: <input type="text" name="imageTwo" value="<%= polynomial.imageTwo %>"
+                        placeholder="Image URL"></br>
+                    <input type="submit" value="Update the polynomial">
+                </form>
+
+            </div>
+        </main>
+    </body>
+
+</html>

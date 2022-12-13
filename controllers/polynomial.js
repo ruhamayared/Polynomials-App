@@ -25,16 +25,16 @@ router.get("/", async (req, res) => {
     res.render("polynomials/index.ejs", { polynomials })
 })
 
-//New route
+//New route -- Polynomials
 router.get("/new", (req, res) => {
     res.render("polynomials/new.ejs")
-  })
+})
 
-//Delete Route -- Polynomial
+//Delete Route -- Polynomials
 router.delete("/:id", async (req, res) => {
     await Polynomial.findByIdAndDelete(req.params.id)
     res.redirect("/polynomials")
-  })
+})
 
 //Delete Route -- Comments
 router.delete("/comments/:id", async (req, res) => {
@@ -42,20 +42,25 @@ router.delete("/comments/:id", async (req, res) => {
     res.redirect(`/polynomials/${req.query.polynomialId}`)
 })
 
+//Update Route -- Polynomials
+router.put("/:id", async (req, res) => {
+    await Polynomial.findByIdAndUpdate(req.params.id, req.body)
+    res.redirect("/polynomials")
+})
+
 //Update Route -- Comments
 router.put("/:id", async (req, res) => {
     //Update the comment
     await Comment.findByIdAndUpdate(req.params.id, req.body)
     res.redirect(`/polynomials/${req.query.polynomialId}`)
-    
 })
 
-//Create Route -- Polynomial
+//Create Route -- Polynomials
 router.post("/", async (req, res) => {
     await Polynomial.create(req.body)
     console.log("body", req.body)
     res.redirect("/polynomials")
-  })
+})
 
 // Create Route -- Comments
 router.post("/comments/:id", (req, res) => {
@@ -70,16 +75,19 @@ router.post("/comments/:id", (req, res) => {
             res.redirect(`/polynomials/${req.params.id}`)
         })
     })
+})
 
-    //Will I need to add a way for user to add comment?
+//Edit Route -- Polynomials
+router.get("/:id/edit", async (req, res) => {
+    const polynomial = await Polynomial.findById(req.params.id)
+    res.render("polynomials/edit-polys.ejs", { polynomial })
 })
 
 //Edit Route -- Comments
 router.get("/comments/:id/edit", async (req, res) => {
     const comment = await Comment.findById(req.params.id)
-    const polynomial = await Polynomial.find({comments: {$in: [comment._id]}}).populate("comments")
+    const polynomial = await Polynomial.find({ comments: { $in: [comment._id] } }).populate("comments")
     res.render("polynomials/edit-comments.ejs", { comment, polynomial: polynomial[0] })
-
 })
 
 //Show route -- Polynomials

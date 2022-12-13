@@ -21,7 +21,7 @@
                         </a>
                         <img src="<%= polynomial.image %> " style="width:200px; border: 3px double black">
                         <div class="indexButtons">
-                            <a href="/<%= polynomial._id %>/edit"><button class="signLog">Edit</button></a>
+                            <a href="/polynomials/<%= polynomial._id %>/edit"><button class="signLog">Edit</button></a>
                             <form action="/polynomials/<%= polynomial._id %>?_method=DELETE" method="POST">
                                 <input class="indexDelete" type="submit" value="Delete" />
                             </form>
@@ -29,11 +29,10 @@
                     </div>
                     <% } %>
 
-                    <nav>
-                        <a href="/polynomials/new"><button class="createButton">Create a New polynomial</button></a>
-                    </nav>
-
             </div>
+            <nav>
+                <a href="/polynomials/new"><button class="createButton">Create a New polynomial</button></a>
+            </nav>
         </div>
 
     </body>

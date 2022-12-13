@@ -17,9 +17,9 @@ body {
   align-items: center;
   text-align: center;
   height: 340px;
-  width: 420px;
+  width: 450px;
   margin: 20px 5px 0 5px;
-  
+
 
   border: 4px ridge rgb(166, 194, 212);
   border-radius: 5%;
@@ -188,4 +188,9 @@ h4 {
   color: black;
   border: 2px solid rgb(118, 175, 210);
   border-radius: 15%;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
 }
